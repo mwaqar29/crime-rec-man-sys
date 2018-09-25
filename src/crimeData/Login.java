@@ -67,7 +67,6 @@ public class Login extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b1) {
-            String s1 = "", s2 = "";
             String user = t1.getText();
             String pass = t2.getText();
 

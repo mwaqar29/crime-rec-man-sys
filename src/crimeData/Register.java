@@ -85,7 +85,6 @@ public class Register extends JFrame implements ActionListener {
 
         if (e.getSource() == b1) {
             try {
-                String s1 = "", s2 = "", s3 = "", s4 = "";
                 String str_user = t1.getText();
                 String str_pass = t2.getText();
                 String str_email = t3.getText();
@@ -93,7 +92,7 @@ public class Register extends JFrame implements ActionListener {
 
                 if (str_user.length() == 0 || str_pass.length() == 0 || str_email.length() == 0 || str_mobile.length() == 0) {
                     JOptionPane.showMessageDialog(null, "Please Fill Out All The Fields!", "Error", JOptionPane.ERROR_MESSAGE);
-                } else if (!s1.equals("'") || !s2.equals("'") || !s3.equals("'") || !s4.equals("'")) {
+                } else {
                     String query = ("insert into reg values('" + str_user + "','" + str_pass + "','" + str_email + "','" + str_mobile + "')");
                     st = con.createStatement();
                     st.executeUpdate(query);
